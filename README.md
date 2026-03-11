@@ -10,9 +10,9 @@
 
 [Josefina Perez](<https://github.com/josefinaperezvalenzuela-hub>)
 
-| Nombre | Afellidd| Enlace de GitHub | Whatsapp||
+| Nombre | Apellido| Enlace de GitHub | Whatsapp|
 | :--- | :--- | :--- | :--- |
-| Lisando| Portaluri | https://github.com/lisandro-portaluri |+5492612720306|
-| Josefina| Perez | https://github.com/josefinaperezvalenzuela-hub |+5492612464307|
-| Ezequiel| Choque | https://github.com/ezequiel-choqueaguirre |+5492612397548|
-| Tadeo| Escudero | https://github.com/Tadeo-Escudero |+5492616818042|
+| Lisando | Portaluri| https://github.com/lisandro-portaluri/Error-404 | +5492612720306|
+| Josefina | Perez| https://github.com/josefinaperezvalenzuela-hub/Error-404 | +5492612464307|
+| Ezequiel | Choque| https://github.com/ezequiel-choqueaguirre/Error-404 | +5492612397548|
+| Tadeo | Escudero| https://github.com/Tadeo-Escudero/Error-404 | +5492616818042|
