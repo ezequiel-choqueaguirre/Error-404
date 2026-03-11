@@ -7,3 +7,6 @@ Tadeo escudero
 
 Ezequiel Choque
 <https://github.com/ezequiel-choqueaguirre>
+
+Lisandro Portaluri 
+<https://github.com/lisandro-portaluri>
