@@ -1,5 +1,5 @@
 # Tecnica y Herramientas Modernas
-**error 404**
+
 # integrantes del grupo
 
 Tadeo escudero 
