@@ -10,7 +10,7 @@
 
 [Josefina Perez](<https://github.com/josefinaperezvalenzuela-hub>)
 
-[Nicolas blanco](<https://github.com/whitenicolas913-cmd>)
+[Nicolas Blanco](<https://github.com/whitenicolas913-cmd>)
 
 ![](error404-logo_page-0001.jpg)
 
@@ -20,6 +20,5 @@
 | Josefina | Perez| https://github.com/josefinaperezvalenzuela-hub/Error-404 | +5492612464307|
 | Ezequiel | Choque| https://github.com/ezequiel-choqueaguirre/Error-404 | +5492612397548|
 | Tadeo | Escudero| https://github.com/Tadeo-Escudero/Error-404 | +5492616818042|
-
-
+| Nicolas | Blanco| https://github.com/whitenicolas913-cmd/Error-404 | +542612052528|
 
