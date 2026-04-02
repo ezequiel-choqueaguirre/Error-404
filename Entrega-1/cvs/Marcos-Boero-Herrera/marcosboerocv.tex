@@ -1,0 +1,126 @@
+\documentclass[10pt,a4paper,withhyper]{altacv}
+
+
+\geometry{left=1.2cm,right=1.2cm,top=1.2cm,bottom=1.2cm,columnsep=0.8cm}
+
+\usepackage{paracol}
+
+\iftutex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+\begin{document}
+\name{Marcos Boero Herrera}
+\tagline{Ingeniero Industrial}
+
+
+\photoR{2.2cm}{Foto CV}
+
+\personalinfo{%
+  \email{marcosboero17@gmail.com}
+  \phone{+54-2614716766}
+  \mailaddress{Ig. Molina, 200, 2514, Villa Nueva}
+  \location{Mendoza, ARGENTINA}
+  \linkedin{https://www.linkedin.com/in/marcos-boero-a55556/}
+  \github{marcosboero17-rgb}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+\cvsection{Experiencia}
+
+\cvevent{Ingeniero de Procesos y Mejora Continua}{Tenaris - Grupo Techint}{Enero 2024 -- Actualidad}{Campana, Buenos Aires}
+\begin{itemize}
+\item Liderazgo de proyectos Lean Manufacturing reduciendo tiempos de set-up en un 15\% mediante metodología SMED.
+\item Monitoreo de KPIs operativos (OEE, disponibilidad y calidad) y gestión de desvíos en líneas de laminación.
+\item Optimización de la cadena de suministro interna reduciendo el stock de seguridad en USD 50k anuales.
+\end{itemize}
+
+\divider
+
+\cvevent{Analista de Planeamiento y Control de Producción (PCP)}{Cervecería y Maltería Quilmes}{Marzo 2022 -- Diciembre 2023}{Quilmes, Buenos Aires}
+\begin{itemize}
+\item Programación de la producción semanal utilizando SAP ERP, coordinando con logística y ventas.
+\item Implementación de herramientas de visualización en Power BI para el seguimiento de cumplimiento de plan de carga.
+\item Reducción del 10\% en mermas de proceso mediante análisis de causa raíz (Ishikawa/5 Whys) en líneas de envasado.
+\end{itemize}
+
+\cvsection{Un día en mi vida}
+
+% Radio reducido de 1.5cm a 1.2cm para evitar el salto de página
+\wheelchart{1.2cm}{0.4cm}{
+  6/8em/accent!30/{Descanso y\\sueño reparador},
+  3/8em/accent!40/Proyectos personales,
+  8/8em/accent!60/Jornada laboral y estudio,
+  2/10em/accent/Deporte y relax,
+  5/6em/accent!20/Tiempo con la familia
+}
+
+\switchcolumn
+
+\cvsection{Fortalezas}
+
+\cvtag{Dedicación}
+\cvtag{Detallismo}\\
+\cvtag{Liderazgo y prolijidad}
+
+\divider\smallskip
+
+\cvtag{C++}
+\cvtag{Latex}\\
+\cvtag{Análisis Estadístico}
+
+\cvsection{Idiomas}
+
+\cvskill{Español}{5}
+\divider
+
+\cvskill{Inglés}{4}
+\divider
+
+\cvskill{Italiano}{2}
+
+\cvsection{Educación}
+
+\cvevent{Ingeniería industrial}{Universidad Nacional de Cuyo}{Marzo 2024 -- Junio 2030}{}
+
+\divider
+
+\cvevent{Maestría en LLogística}{Universidad Nacional de Cuyo}{Marzo 2031 -- Diciembre 2033}{}
+
+\divider
+
+\end{paracol}
+
+\end{document}
