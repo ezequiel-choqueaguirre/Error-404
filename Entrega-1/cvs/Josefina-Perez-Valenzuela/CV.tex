@@ -1,0 +1,207 @@
+\documentclass[10pt,a4paper,withhyper]{altacv}
+
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+
+\iftutex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+
+\begin{document}
+ %\documentclass[10pt,a4paper,withhyper]{altacv}
+
+ %\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+%\usepackage{paracol}
+
+\iftutex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  %\usepackage[rm]{roboto}
+ % \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+
+\name{Josefina Perez Valenzuela }
+\tagline{Industrial Engineer | Process Optimization | Data Analysis}
+
+% FOTO (poné tu archivo en Overleaf, ej: foto.jpg)
+\photoR{3.5cm}{1.png}
+
+\personalinfo{
+  \email{josefinaperezvalenzuela@gmail.com}
+  \phone{+54 9 261 123 1234}
+  \location{Mendoza, Argentina}
+  \linkedin{linkedin.com/in/josefinaperezvalenzuela}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+
+%-------------------------
+% EXPERIENCE
+%-------------------------
+\cvsection{Experience}
+
+\cvevent{Process Engineer}{Techint Group}{2026 -- Present}{Argentina}
+\begin{itemize}
+\item Led process optimization projects in industrial operations
+\item Reduced operational times by 18\% through workflow redesign
+\item Developed KPI dashboards for performance tracking (Excel, Power BI)
+\end{itemize}
+
+\divider
+
+\cvevent{Supply Chain Analyst}{Unilever}{2025 -- 2026}{Argentina}
+\begin{itemize}
+\item Analyzed logistics and inventory data to improve efficiency
+\item Reduced stock shortages by 15\% through demand planning
+\item Collaborated with cross-functional teams in regional projects
+\end{itemize}
+
+\divider
+
+\cvevent{Engineering Intern}{YPF}{2024 -- 2025}{Argentina}
+\begin{itemize}
+\item Supported production planning and process analysis
+\item Built reporting tools in Excel for decision-making
+\item Assisted in continuous improvement initiatives
+\end{itemize}
+
+%-------------------------
+% PROJECTS
+%-------------------------
+\cvsection{Projects}
+
+\cvevent{Process Optimization Model}{Academic Project}{}{}
+\begin{itemize}
+\item Developed a model to optimize production flow
+\item Applied Lean Manufacturing and data analysis tools
+\end{itemize}
+
+\divider
+
+\cvevent{Data Analysis Dashboard}{Personal Project}{}{}
+\begin{itemize}
+\item Built interactive dashboards in Power BI
+\item Visualized KPIs for operational decision-making
+\end{itemize}
+
+\switchcolumn
+
+%-------------------------
+% EDUCATION
+%-------------------------
+\cvsection{Education}
+
+\cvevent{MSc in Industrial Engineering}{Politecnico di Milano}{2024 -- 2026}{Italy}
+
+\divider
+
+\cvevent{Industrial Engineering}{Universidad Nacional de Cuyo}{2020 -- 2025}{Argentina}
+Doble titulación internacional con Politecnico di Milano
+
+%-------------------------
+% INTERNATIONAL
+%-------------------------
+\cvsection{International Experience}
+
+\cvevent{Academic Exchange}{France}{2023 -- 2024}{}
+\begin{itemize}
+\item Studied engineering subjects in an international environment
+\item Developed cross-cultural communication skills
+\end{itemize}
+
+%-------------------------
+% SKILLS
+%-------------------------
+\cvsection{Skills}
+
+\cvtag{Excel}
+\cvtag{Power BI}
+\cvtag{Data Analysis}
+\cvtag{Lean Manufacturing}
+\cvtag{Process Optimization}
+\cvtag{Project Management}
+
+%-------------------------
+% LANGUAGES
+%-------------------------
+\cvsection{Languages}
+
+\cvskill{Spanish}{5}
+\divider
+\cvskill{English (B2)}{4}
+\divider
+\cvskill{French (B2)}{4}
+\divider
+\cvskill{Italian (B1)}{3}
+
+%-------------------------
+% STRENGTHS
+%-------------------------
+\cvsection{Strengths}
+
+\cvtag{Analytical Thinking}
+\cvtag{Problem Solving}
+\cvtag{Teamwork}
+\cvtag{Adaptability}
+
+\end{paracol}
+
+
+\end{document}
