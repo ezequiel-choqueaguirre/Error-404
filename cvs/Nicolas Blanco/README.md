@@ -1,1 +1,0 @@
-CV de Nicolas Blanco
