@@ -1,0 +1,122 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tikz}
+
+% Colores
+\definecolor{maincolor}{HTML}{1F4E79} % azul elegante
+\definecolor{accent}{HTML}{3A7CA5}
+
+% Links
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent
+}
+
+% Estilo de secciones
+\titleformat{\section}
+{\large\bfseries\color{maincolor}}
+{}{0em}{}[\titlerule]
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\begin{document}
+
+%====================
+% HEADER
+%====================
+\begin{center}
+\begin{tabular}{c c}
+\begin{minipage}{0.7\textwidth}
+    {\LARGE \textbf{\color{maincolor} Nicolas Blanco}} \\
+
+    {\color{accent} Ingeniero Industrial} \\
+    
+    \vspace{0.4cm}
+    
+    \href{mailto:whitenicolas05@gmail.com}{whitenicolas05@gmail.com}
+    \quad | \quad 
+    \href{https://linkedin.com/in/nicolas}{linkedin.com/in/nicolas}
+\end{minipage}
+&
+\begin{minipage}{0.25\textwidth}
+\begin{tikzpicture}
+\clip (0,0) circle (2.2cm);
+\node at (0,0) {\includegraphics[width=3.4cm]{foto.jpg}};
+\end{tikzpicture}
+\end{minipage}
+\end{tabular}
+\end{center}
+
+
+
+\vspace{0.1cm}
+
+%====================
+\section*{Perfil}
+Ingeniero Industrial con formación internacional y especialización en Industria 4.0 y análisis de datos. Experiencia en optimización de procesos, automatización industrial y desarrollo de soluciones basadas en datos.
+
+%====================
+\section*{Educación}
+
+\vspace{0.2cm}
+\textbf{Ingeniería Industrial} \hfill {\color{accent}2018 -- 2023} \\
+Universidad Nacional de Cuyo \\
+Doble titulación (tesis desarrollada en Francia, Université Paris-Saclay)
+
+\vspace{0.2cm}
+
+\textbf{Máster en Industria 4.0} \hfill {\color{accent}2023 -- 2025} \\
+Technical University of Munich (Alemania)
+
+\vspace{0.2cm}
+
+\textbf{Técnico en Electrónica y Automatización} \hfill {\color{accent}2012 -- 2017} \\
+Escuela Técnica Ingeniero Villanueva
+
+%====================
+\section*{Experiencia}
+
+\textbf{Data Analyst Engineer – Siemens AG} \hfill {\color{accent}2025 -- Presente}
+\begin{itemize}
+    \item Análisis de datos para optimización de procesos industriales
+    \item Desarrollo de modelos en Python
+    \item Implementación de soluciones de Industria 4.0
+\end{itemize}
+
+\textbf{Ingeniero de Procesos – Techint} \hfill {\color{accent}2023 -- 2025}
+\begin{itemize}
+    \item Optimización de procesos productivos
+    \item Análisis de KPIs y mejora continua
+\end{itemize}
+
+\textbf{Pasantía Técnica – IMPSA} \hfill {\color{accent}2022 -- 2023}
+\begin{itemize}
+    \item Mecanizado y ajuste de componentes industriales
+    \item Interpretación de planos y control de calidad
+\end{itemize}
+
+%====================
+\section*{Habilidades}
+
+\textbf{Programación:} Python, C++, HTML \\
+\textbf{Software:} MATLAB/Octave, LaTeX \\
+\textbf{Datos:} Data Analytics, visualización, modelado \\
+\textbf{Idiomas:} Español (nativo), Inglés (avanzado), Francés (intermedio)
+
+%====================
+\section*{Habilidades Blandas}
+
+Trabajo en equipo, pensamiento analítico, comunicación efectiva, adaptabilidad, aprendizaje continuo.
+
+%====================
+\section*{Información Adicional}
+
+Disponibilidad para relocalización internacional. Interés en innovación tecnológica e Industria 4.0.
+
+\end{document}
