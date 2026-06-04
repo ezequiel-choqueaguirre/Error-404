@@ -1,0 +1,297 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- Paquetes de Diseño y Formato Moderno ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage[margin=2.5cm]{geometry} % Márgenes limpios
+\usepackage{amsmath, amssymb}       % Soporte matemático
+\usepackage{booktabs}               % Tablas de alta calidad visual
+\usepackage{microtype}              % Mejoras en la tipografía y espaciado
+\usepackage{parskip}                % Espaciado moderno entre párrafos (sin sangría)
+\usepackage{xcolor}                 % Paleta de colores personalizados
+\usepackage{tcolorbox}              % Cajas modernas para resaltar datos
+
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdot}} % Agrega puntos para las secciones
+\setcounter{tocdepth}{2} % Muestra secciones y subsecciones en el índice
+
+% --- PAQUETE PARA ÍNDICE INTERACTIVO ---
+\usepackage[hidelinks]{hyperref} % hidelinks oculta los recuadros de colores feos
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary, % Los clics del índice usarán el azul de tu diseño
+    filecolor=magenta,      
+    urlcolor=accent,   % Las páginas web usarán el verde de tu diseño
+}
+
+% --- Configuración de Colores Estilo Corporativo ---
+\definecolor{primary}{RGB}{31, 78, 121}    % Azul pizarra elegante
+\definecolor{secondary}{RGB}{90, 107, 124} % Gris azulado
+\definecolor{accent}{RGB}{46, 117, 89}     % Verde mate (alusivo a la yerba mate)
+\definecolor{lightgray}{RGB}{245, 247, 250}
+
+% --- Configuración de Títulos ---
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdot}} % Agrega puntos para las secciones
+\setcounter{tocdepth}{2} % Muestra secciones y subsecciones en el índice
+\usepackage{titlesec}
+\titleformat{\section}{\color{primary}\normalfont\Large\bfseries}{\thesection}{1em}{}[{\color{primary}\titlerule}]
+\titleformat{\subsection}{\color{secondary}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% --- Configuración de la Caja de Resultados Financieros ---
+\tcbset{
+    modernbox/.style={
+        colback=lightgray,
+        colframe=primary,
+        arc=4mm,
+        boxrule=1.5pt,
+        top=4mm, bottom=4mm, left=5mm, right=5mm,
+        shadow={2mm}{-2mm}{0mm}{black!10}
+    }
+}
+
+% --- Datos del Documento ---
+
+
+
+\begin{document}
+% --- PORTADA MODERNA ---
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    
+    % Bloque de Encabezado Decorativo de la Materia
+    {\large\scshape\color{secondary} Materia: Técnicas y Herramientas Modernas} \\[0.4cm]
+
+    \vspace{1.5cm}
+    
+    % Línea decorativa superior
+    {\color{primary}\hrule height 2pt}
+    \vspace{0.6cm}
+    
+    % Título Principal
+    {\Huge \bfseries \color{primary} Módulo 3: Simulación por eventos discretos} \\[0.4cm]
+    {\Large \bfseries \color{secondary} Flujo Operativo del Proceso de la Yerba Mate} \\
+    \vspace{0.6cm}
+    
+    % Línea decorativa inferior
+    {\color{primary}\hrule height 1pt}
+    \vspace{2.5cm}
+    
+    % Información del Grupo
+    \begin{minipage}{0.45\textwidth}
+        \begin{flushleft} \large
+            \textbf{\color{primary}Grupo:} \\
+            {\fontfamily{cmtt}\selectfont Error 404} \\[1cm] % Fuente estilo código para el nombre
+        \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.45\textwidth}
+        \begin{flushright} \large
+            \textbf{\color{primary}Integrantes:} \\
+            \vspace{0.1cm}
+            Tadeo Escudero \\
+            Ezequiel Choque \\
+            Lisandro Portaluri \\
+            Marcos Boero \\
+            Nicolas Blanco \\
+            Josefina Perez \\
+        \end{flushright}
+    \end{minipage}
+    
+    \vfill
+    
+    % Pie de página de la portada
+    {\color{secondary}\hrule height 0.5pt}
+    \vspace{0.4cm}
+    {\large\color{secondary} \today}
+    \vspace*{0.5cm}
+\end{titlepage}
+
+% --- FIN DE LA PORTADA ---
+\newpage
+
+% --- SECCIÓN DEL ÍNDICE INTERACTIVO ---
+\begin{keepfromtoc}
+    \tableofcontents
+\end{keepfromtoc}
+
+\vspace{0.5cm}
+\hrule
+\newpage % Salto de página para que el contenido comience limpio
+
+
+
+\hrule
+\vspace{0.5cm}
+
+Decidimos realizar una simulación sobre la industria de la yerba mate, donde la simulación realizada muestra como entra la materia prima, como se procesa en cada etapa y como se llega al producto final, donde consideramos perdidas y costos de producción 
+
+\section{Introducción a SIMUL8}
+
+\textbf{SIMUL8} es un software avanzado de simulación de eventos discretos utilizado para modelar, analizar y optimizar procesos productivos, logísticos y de servicios. Su propósito principal es recrear el comportamiento de un sistema real dentro de un entorno virtual seguro, permitiendo evaluar el impacto de diferentes variables (como tiempos, capacidades y costos) sin necesidad de interrumpir las operaciones reales o incurrir en gastos de capital. A través de una interfaz gráfica intuitiva y un potente motor estadístico, se convierte en una herramienta clave para la toma de decisiones estratégicas y la ingeniería de procesos.
+
+\section{Componentes Principales del Software}
+
+El modelado en SIMUL8 se fundamenta en cinco bloques u objetos estándar que permiten estructurar cualquier flujo de valor:
+
+\subsection{1. Punto de Entrada (\textit{Entry Point})}
+\begin{itemize}
+    \item \textbf{¿Qué es y qué hace?:} Es el elemento que genera e introduce los elementos de trabajo (\textit{Work Items}) en el sistema. Representa la fuente externa de materia prima, clientes o pedidos.
+    \item \textbf{Cómo se usa:} Se configura definiendo la tasa de arribo (el tiempo que transcurre entre la llegada de una unidad y otra, ya sea fijo o mediante distribuciones estadísticas) y se le pueden asignar costos financieros de adquisición.
+\end{itemize}
+
+\subsection{2. Centro de Trabajo (\textit{Work Center})}
+\begin{itemize}
+    \item \textbf{¿Qué es y qué hace?:} Es el lugar donde se lleva a cabo una operación, transformación o inspección sobre los elementos de trabajo. Es el núcleo operativo donde se consume tiempo.
+    \item \textbf{Cómo se usa:} Se le asigna un tiempo de ciclo (fijo o variable), costos de operación por unidad y reglas de enrutamiento tanto de entrada (\textit{Routing In}) como de salida (\textit{Routing Out}) para dirigir el flujo.
+\end{itemize}
+
+\subsection{3. Almacenamiento (\textit{Storage / Queue})}
+\begin{itemize}
+    \item \textbf{¿Qué es y qué hace?:} Funciona como un pulmón, fila de espera o depósito de inventario entre procesos. Retiene los elementos temporalmente cuando el siguiente centro de trabajo está ocupado o cuando se requiere un tiempo de espera obligatorio.
+    \item \textbf{Cómo se usa:} Se parametriza definiendo su capacidad máxima (finita o infinita) y restricciones de permanencia, como el tiempo mínimo de espera (\textit{Min Wait Time}), ideal para procesos de maduración o secado.
+\end{itemize}
+
+\subsection{4. Recurso (\textit{Resource})}
+\begin{itemize}
+    \item \textbf{¿Qué es y qué hace?:} Representa los elementos necesarios para que un Centro de Trabajo pueda operar, tales como operarios, maquinaria especializada o herramientas. El centro de trabajo no iniciará si el recurso no está disponible.
+    \item \textbf{Cómo se usa:} Se vincula directamente a uno o más \textit{Work Centers}. Se configuran sus cantidades disponibles, calendarios de turnos y esquemas de costos salariales por hora o día.
+\end{itemize}
+
+\subsection{5. Punto de Salida (\textit{Exit Point})}
+\begin{itemize}
+    \item \textbf{¿Qué es y qué hace?:} Es el destino final de los elementos de trabajo. Absorbe las unidades que completaron exitosamente el flujo (o las mermas desviadas), retirándolas de la simulación activa.
+    \item \textbf{Cómo se usa:} Registra los contadores totales de producción y permite asociar el precio de venta final por unidad o lote, alimentando de forma directa el estado de resultados financiero del modelo.
+\end{itemize}
+
+
+\section{Descripción del Modelo }
+
+
+
+\subsection{Etapa 1: Ingreso de Materia Prima (Hoja Verde)}
+\begin{itemize}
+    \item \textbf{Configuración en el Modelo:} El punto de entrada (\textit{Entry Point}) simula el arribo de la materia prima con una tasa fija de \textbf{1 tonelada cada 3.55 días} (fixed value = 3.55). Cada tonelada ingresada registra un costo financiero de \textbf{190 USD}.
+    \item \textbf{Representación Real:} Simula las ventanas de cosecha y el transporte regulado de la hoja verde desde los yerbales hacia el secadero. El costo por unidad representa el pago al productor por el producto puesto en planta.
+\end{itemize}
+
+\subsection{Etapa 2: Zapecado y Pérdida por Humedad (Mermas)}
+\begin{itemize}
+    \item \textbf{Configuración en el Modelo:} Tras un pulmón de amortiguación, el material ingresa al centro de trabajo \textit{Zapecado} (tiempo fijo de \textbf{0.04 días} y costo operativo de \textbf{10 USD/unidad}). A la salida, se aplica una regla de enrutamiento por porcentaje (\textit{Routing Out Percent}): el \textbf{66.66667\%} se deriva a un punto de pérdida (\textit{Exit Point}), mientras que solo el \textbf{33.33333\%} restante continúa en el proceso.
+    \item \textbf{Representación Real:} El zapecado es un proceso térmico rápido (exposición directa a las llamas por unos segundos) indispensable para inactivar las enzimas que ennegrecen la hoja. La drástica reducción de masa configurada (66.66\%) simula con alta precisión la \textbf{deshidratación inicial y pérdida de humedad} que sufre la hoja verde, donde se requieren aproximadamente 3 kg de hoja verde para obtener 1 kg de yerba canchada seca.
+\end{itemize}
+
+\subsection{Etapa 3: Secado y Conformación de Lotes (Batching)}
+\begin{itemize}
+    \item \textbf{Configuración en el Modelo:} La yerba zapecada se acumula en un pulmón hasta alcanzar la condición del centro de trabajo \textit{Secadero}: una operación de recolección (\textit{Collect}) de \textbf{70 unidades} (toneladas). El secadero unifica este volumen en un único ítem de trabajo (lote de 70t), requiriendo un tiempo fijo de \textbf{5.6 días} y un costo de \textbf{15 USD/unidad}.
+    
+
+\end{itemize}
+
+\subsection{Etapa 4: Estacionamiento y Maduración (Simulación del Tiempo Crítico)}
+\begin{itemize}
+    \item \textbf{Configuración en el Modelo:} Al salir del secadero, los lotes se distribuyen (regla \textit{Shortest Queue}) hacia \textbf{3 almacenes de almacenamiento} independientes con capacidad unitaria de 1 lote y un tiempo mínimo de espera (\textit{Min Wait Time}) de \textbf{45 días}. Posterior a esto, el \textit{Centro Fantasma} regula la salida mediante una distribución uniforme (mínimo 45, máximo 47 días), priorizando el lote más antiguo (\textit{Oldest}) y absorbiendo los tiempos de permanencia.
+    \item \textbf{Representación Real:} Esta sección es la analogía directa del \textbf{estacionamiento de la yerba mate}. La yerba canchada debe madurar para adquirir sus propiedades organolépticas (sabor, aroma y color). El modelo recrea con éxito el estacionamiento acelerado en cámaras (que suele rondar entre los 30 y 60 días bajo condiciones controladas de temperatura y humedad), garantizando que ningún lote pase a molienda sin haber cumplido su tiempo de maduración biológica.
+\end{itemize}
+
+\subsection{Etapa 5: Molienda (Canchado y Finura)}
+\begin{itemize}
+    \item \textbf{Configuración en el Modelo:} El flujo pasa por dos etapas consecutivas con pulmones intermedios: \textit{Molienda Gruesa} (tiempo fijo de \textbf{0.04 días}, costo de \textbf{10 USD}) y \textit{Molienda Fina} (tiempo fijo de \textbf{0.03 días}, costo de \textbf{10 USD}), antes de llegar al punto de salida final.
+    \item \textbf{Representación Real:} Equivale a la molienda gruesa o ``canchado'' (trituración gruesa para facilitar el transporte y guardado) y a la posterior molienda de dosificación final, donde se muelen y mezclan las hojas y palos en las proporciones comerciales estándar antes del envasado.
+\end{itemize}
+
+\section{Restricciones Operativas del Sistema (Calendario Laboral y Recursos)}
+
+Para asegurar el realismo operativo, se incorporaron restricciones de jornadas laborales y disponibilidad de personal:
+\begin{itemize}
+    \item \textbf{Calendario de Planta:} La simulación se ejecuta sobre un periodo de \textbf{365 días}, configurada con una semana laboral de \textbf{lunes a viernes}. La jornada productiva de los centros de trabajo está acotada de \textbf{08:00 a 16:00 horas} (8 horas diarias de procesamiento activo).
+    \item \textbf{Mano de Obra (Recursos):} Cada centro de trabajo (a excepción del Centro Fantasma) requiere un operario para funcionar. Los operarios están vinculados a un horario de disponibilidad ampliado de \textbf{08:00 a 24:00 horas}, percibiendo una remuneración fija de \textbf{128 USD por día trabajado}. Esto modela los costos fijos de personal de planta, mantenimiento diario y turnos de limpieza fuera del horario estricto de producción.
+\end{itemize}
+
+
+\section{Evaluación Económica de la Simulación}
+
+Al concluir el ciclo de 365 días, el sistema consolida un estado de resultados financiero basado estrictamente en el volumen de lotes procesados que lograron completar la maduración y molienda:
+
+\vspace{0.3cm}
+
+\begin{table}[h!]
+\centering
+\caption{Estado de Resultados, Consolidado de la Simulación}
+\vspace{0.2cm}
+\small % Reduce ligeramente la fuente para que se vea más estilizada
+\begin{tabular}{l c p{6.5cm}}
+\toprule
+\textbf{\color{primary}Concepto Financiero} & \textbf{\color{primary}Valor (USD)} & \textbf{\color{primary}Justificación Operativa} \\
+\midrule
+\textbf{Ingresos (Revenue)} & \$1,121,400.00 & Salida efectiva de 6 lotes comercializados a \$186,900.00 c/u. \\
+\addlinespace[0.2cm] % Añade un aire limpio entre filas
+\textbf{Costos (Costs)}     & \$211,462.36   & Adquisición de hoja verde, costos de uso y mano de obra fijos. \\
+\midrule
+\textbf{\color{accent}Utilidad (Profit)} & \textbf{\$909,937.64} & Balance neto positivo del ejercicio simulado. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{0.3cm}
+
+
+\begin{center}
+\begin{subsection}*{Resumen del Balance General}
+\end{subsection}
+\begin{tcolorbox}[modernbox, width=0.85\textwidth]
+    \centering
+    \Large \textbf{Resumen Ejecutivo Financiero} \\[0.3cm]
+    \large
+    \begin{tabular}{r l}
+        \textbf{Ingresos Totales:} & \$1,121,400.00 \\
+        \textbf{Costos Totales:}   & \$211,462.36 \\
+        \hline \vspace{-0.2cm} \\
+        \textbf{\color{accent}Ganancia Neta:} & \textbf{\color{accent}\$909,937.64}
+    \end{tabular}
+\end{tcolorbox}
+\end{center}
+
+\vspace{0.5cm}
+\textbf{Conclusión del Informe:} Los parámetros introducidos en SIMUL8 permiten verificar matemáticamente la transformación de la materia prima. A pesar del fuerte impacto volumétrico que genera la simulación de la pérdida de humedad (merma del 66.6\%), el alto valor comercial del lote finalizado (yerba mate estacionada y molida) compensa los costos operativos y de adquisición, devolviendo un margen de ganancia neto y predecible para la organización.
+
+\vspace{0.5cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.05\linewidth]{gax.png}
+ 
+    \label{fig:placeholder}
+\end{figure}
+
+
+\section{Conclusión sobre el Uso de SIMUL8 como Herramienta de Ingeniería}
+
+El desarrollo de este modelo demuestra que \textbf{SIMUL8} es una herramienta de simulación de eventos discretos sumamente potente y versátil para la ingeniería de procesos. Su capacidad para traducir parámetros operativos complejos en un entorno visual y dinámico permite entender el comportamiento real de una planta antes de realizar modificaciones físicas o inversiones de capital.
+
+A través de esta simulación, se destacan los siguientes alcances y potencialidades de la herramienta:
+
+\begin{itemize}
+    \item \textbf{Flexibilidad de Parametrización:} Permite modelar con precisión fenómenos físicos y lógicos muy diversos, tales como la tasa de deshidratación en el zapecado mediante reglas de porcentaje, el procesamiento por lotes masivos (\textit{batching}) en el secadero, y las restricciones biológicas de tiempo en las cámaras de estacionamiento.
+    \item \textbf{Sincronización de Recursos y Calendarios:} La herramienta va más allá del simple flujo de materiales al permitir la integración de calendarios laborales humanos y restricciones de turnos (como la jornada de 8 a 24 hs de los operarios), lo que otorga un realismo operativo crítico para la planificación de la mano de obra.
+    \item \textbf{Simulación de Escenarios y Análisis Financiero Integrado:} Al conectar directamente las operaciones con un módulo financiero interno, SIMUL8 transforma variables de tiempo y volumen en estados de resultados económicos inmediatos (Ingresos, Costos y Utilidades). Esto facilita la evaluación de la viabilidad de un negocio bajo diferentes configuraciones.
+    \item \textbf{Capacidad de Escalabilidad y Optimización:} El verdadero potencial de la herramienta radica en su alcance para el análisis \textit{``What-If''} (¿Qué pasaría si...?). Con el modelo base ya construido, es posible experimentar instantáneamente cambiando la tasa de arribo de la hoja verde, modificando las capacidades de los almacenes o alterando los tiempos de molienda para evaluar el impacto en la rentabilidad neta sin detener la producción real.
+\end{itemize}
+
+En conclusión, SIMUL8 se consolida como un activo estratégico indispensable. No solo permite replicar con alta fidelidad las etapas críticas de la industria de la yerba mate, sino que proporciona a los tomadores de decisiones una plataforma cuantitativa robusta para optimizar recursos, mitigar riesgos operativos y maximizar los beneficios económicos de la organización.
+
+\section{Conclusiones sobre el Proceso de Aprendizaje}
+
+El proceso de diseño, parametrización y validación del modelo de simulación en SIMUL8 permitió al equipo consolidar una serie de aprendizajes metodológicos y técnicos clave:
+
+\begin{itemize}
+    \item \textbf{Modelado por capas:} Aunque el proceso de producción de la yerba mate presenta una estructura lineal, su traducción al software de simulación resultó compleja para un nivel inicial. Para solucionar esto, se optó por un enfoque de desarrollo por capas, incrementando la fidelidad del modelo de manera gradual. Inicialmente se simplificaron variables —como asumir un depósito de materia prima instantáneo o ignorar las pérdidas de masa y los tiempos de maduración— para luego integrar estas restricciones en fases posteriores.
+    \item \textbf{El rol de la Inteligencia Artificial y el autoaprendizaje:} Ante la necesidad de mantener un enfoque autodidacta, la asistencia de la IA fue un factor clave para agilizar la interpretación y traducción de los manuales técnicos (disponibles únicamente en inglés). Asimismo, funcionó como soporte para comprender la lógica de las herramientas del entorno y validar los resultados preliminares de la simulación.
+    \item \textbf{Limitaciones técnicas y resolución de problemas:} El uso de la IA demostró tener restricciones severas en apartados lógicos avanzados, entregando en ocasiones distribuciones de probabilidad inadecuadas o datos erróneos. Esto obligó al equipo a recurrir al método de prueba y error, complementado con una investigación externa sobre costos reales, precios y tiempos de maduración. Esta intervención analítica humana fue la que permitió corregir las fallas del modelo automatizado y alcanzar un escenario financiero con ganancias.
+    \item \textbf{Alcance del modelo:} La simulación final, si bien simplifica ciertos aspectos operativos, representa con fidelidad la dinámica general de la industria de la yerba mate, quedando abierta a futuras optimizaciones.
+\end{itemize}
+
+En conclusión, SIMUL8 (la version usada en la catedra) presenta una curva de aprendizaje pronunciada debido a una interfaz poco intuitiva para usuarios principiantes. Sin embargo, una vez superada la barrera inicial, se consolida como una herramienta robusta y eficaz para el análisis y la optimización de procesos industriales.
+
+
+\end{document}
